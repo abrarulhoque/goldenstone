@@ -1016,3 +1016,103 @@ h6 {
   color: var(--secondary-color);
   text-transform: uppercase;
 }
+
+/* Page Header */
+.page-header {
+  position: relative;
+  padding: 150px 0 100px;
+  background-color: var(--primary-color);
+  color: white;
+  overflow: hidden;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-header .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Legal Content Pages (Terms & Privacy) */
+.legal-content {
+  background-color: #f9f9f9;
+}
+
+.content-block {
+  margin-bottom: 40px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-block h2 {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+}
+
+.content-block h5 {
+  color: var(--text-dark);
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.content-block ul {
+  padding-left: 25px;
+}
+
+.content-block ul li {
+  margin-bottom: 10px;
+}
+
+/* Services Detailed Page */
+.services-detailed-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover img {
+  transform: scale(1.02);
+}
+
+.service-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.benefits-list li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+  margin-top: 4px;
+}
