@@ -430,6 +430,29 @@ h6 {
   z-index: -1;
 }
 
+/* Add spacing for the About section */
+.about-section .divider {
+  margin-bottom: 30px;
+}
+
+.about-section .section-subtitle {
+  margin-bottom: 15px;
+}
+
+.about-section .section-title {
+  margin-bottom: 20px;
+}
+
+/* Add padding for the first paragraph to move it away from the yellow line */
+.about-section p:first-of-type {
+  padding-top: 10px;
+}
+
+/* Increase space between divider and text */
+.about-section .section-header {
+  margin-bottom: 25px !important;
+}
+
 /* FAQ Section */
 .faq-section {
   padding: 100px 0;
