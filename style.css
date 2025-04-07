@@ -1017,102 +1017,84 @@ h6 {
   text-transform: uppercase;
 }
 
-/* Page Header */
-.page-header {
-  position: relative;
-  padding: 150px 0 100px;
-  background-color: var(--primary-color);
-  color: white;
-  overflow: hidden;
-}
-
-.page-header h1 {
-  font-size: 3rem;
+/* Credit Title */
+.credit-title {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
 }
 
-.page-header .lead {
-  font-size: 1.25rem;
-  opacity: 0.9;
+/* Services Detailed Section */
+.services-detailed {
+  padding: 20px 0 50px;
 }
 
-/* Legal Content Pages (Terms & Privacy) */
-.legal-content {
-  background-color: #f9f9f9;
-}
-
-.content-block {
-  margin-bottom: 40px;
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.content-block h2 {
-  color: var(--primary-color);
-  font-size: 1.75rem;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--secondary-color);
-  display: inline-block;
-}
-
-.content-block h5 {
-  color: var(--text-dark);
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.content-block ul {
-  padding-left: 25px;
-}
-
-.content-block ul li {
-  margin-bottom: 10px;
-}
-
-/* Services Detailed Page */
-.services-detailed-section {
-  padding: 80px 0;
-  background-color: #ffffff;
-}
-
-.section-intro {
-  max-width: 800px;
-  margin: 0 auto 60px;
-}
-
-.service-image img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.service-image:hover img {
-  transform: scale(1.02);
-}
-
-.service-content h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.benefits-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.benefits-list li {
-  margin-bottom: 12px;
+.service-icon-large {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
-.benefits-list li i {
+.service-icon-large i {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+
+.service-icon-large:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-10px);
+}
+
+.service-icon-large:hover i {
+  color: white;
+}
+
+.service-title {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-description {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.service-features li i {
   color: var(--secondary-color);
   margin-right: 10px;
-  margin-top: 4px;
+}
+
+@media (max-width: 991px) {
+  .service-icon-large {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .service-icon-large i {
+    font-size: 48px;
+  }
 }
