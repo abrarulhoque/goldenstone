@@ -50,10 +50,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">What We Offer</a>
+              <a class="nav-link" href="services.html">What We Offer</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About Us</a>
@@ -62,7 +62,7 @@
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-qualify" href="#qualify">Apply Now</a>
+              <a class="nav-link btn-qualify" href="services.html">Apply Now</a>
             </li>
           </ul>
         </div>
@@ -82,7 +82,11 @@
               and quick approvals to help your business grow.
             </p>
             <button class="btn btn-primary btn-lg me-3 mb-3 mb-lg-0">
-              Apply Now
+              <a
+                href="services.html"
+                style="color: white; text-decoration: none"
+                >Apply Now</a
+              >
             </button>
             <button class="btn btn-outline-light btn-lg mb-3 mb-lg-0">
               Learn More
@@ -145,7 +149,7 @@
                 Fast funding for your business with flexible repayment options
                 based on your daily sales.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -161,7 +165,7 @@
                 Turn your unpaid invoices into immediate cash to improve your
                 business cash flow.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -177,7 +181,7 @@
                 Flexible credit lines that grow with your business needs and
                 only pay for what you use.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -193,7 +197,7 @@
                 Financing options available regardless of credit history or past
                 financial challenges.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -209,7 +213,7 @@
                 Get the equipment your business needs without the large upfront
                 investment.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -225,7 +229,7 @@
                 Our experienced team is always available to assist you with any
                 questions or concerns.
               </p>
-              <a href="#" class="service-link"
+              <a href="services.html" class="service-link"
                 >Learn More <i class="material-icons">arrow_forward</i></a
               >
             </div>
@@ -265,14 +269,35 @@
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="qualify-form-card">
-              <h3 class="form-title text-center mb-4">Qualify Now</h3>
-              <form>
+            <div class="hero-form-card">
+              <h3 class="form-title text-center mb-4">Apply for Credit</h3>
+              <form id="applyForm">
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Business Name"
+                    placeholder="Enter amount here ($5,000 minimum)"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" required>
+                    <option selected disabled value="">
+                      What are your monthly sales?
+                    </option>
+                    <option>below $5,000</option>
+                    <option>$5,000 - $25,000</option>
+                    <option>$25,000 - $50,000</option>
+                    <option>$50,000 - $100,000</option>
+                    <option>$100,000 - $500,000</option>
+                    <option>$500,000 or more</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Full Name"
                     required
                   />
                 </div>
@@ -280,7 +305,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Full Name"
+                    placeholder="Business Name"
                     required
                   />
                 </div>
@@ -300,27 +325,11 @@
                     required
                   />
                 </div>
-                <div class="row mb-3">
-                  <div class="col">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="City"
-                      required
-                    />
-                  </div>
-                  <div class="col">
-                    <select class="form-select" required>
-                      <option selected disabled value="">State</option>
-                      <option>CA</option>
-                      <option>NY</option>
-                      <option>TX</option>
-                      <!-- Add more states as needed -->
-                    </select>
-                  </div>
+                <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                  Thank you, we will contact you in 24 hours
                 </div>
-                <button type="submit" class="btn btn-primary w-100">
-                  Continue
+                <button type="submit" class="btn btn-qualify w-100">
+                  Submit
                 </button>
               </form>
             </div>
@@ -367,7 +376,7 @@
               agents will give you a call.
             </p>
             <div class="mt-4">
-              <button class="btn btn-primary">Learn More</button>
+              <a href="services.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -651,7 +660,12 @@
             Get the funding your business needs today without the hassle and
             wait time of traditional lenders.
           </p>
-          <button class="btn btn-qualify btn-lg">Apply Now</button>
+          <a
+            href="services.html"
+            class="btn btn-qualify btn-lg"
+            style="text-decoration: none"
+            >Apply Now</a
+          >
         </div>
       </div>
     </section>
