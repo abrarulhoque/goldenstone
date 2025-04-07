@@ -108,6 +108,15 @@ h6 {
   padding: 10px 0;
 }
 
+/* Add white color to the navbar-toggler icon when not scrolled */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
 .navbar-brand {
   font-weight: 700;
   font-size: 28px;
@@ -428,29 +437,6 @@ h6 {
   left: 20px;
   border-radius: var(--border-radius);
   z-index: -1;
-}
-
-/* Add spacing for the About section */
-.about-section .divider {
-  margin-bottom: 30px;
-}
-
-.about-section .section-subtitle {
-  margin-bottom: 15px;
-}
-
-.about-section .section-title {
-  margin-bottom: 20px;
-}
-
-/* Add padding for the first paragraph to move it away from the yellow line */
-.about-section p:first-of-type {
-  padding-top: 10px;
-}
-
-/* Increase space between divider and text */
-.about-section .section-header {
-  margin-bottom: 25px !important;
 }
 
 /* FAQ Section */
@@ -1214,5 +1200,26 @@ nav.navbar {
     padding-left: 5px !important;
     padding-right: 5px !important;
     margin: 0 5px !important;
+  }
+}
+
+/* Spacing for About Us section */
+
+/* Mobile (stacked columns): Add space ABOVE the text column */
+@media (max-width: 991.98px) {
+  #about .row > .col-lg-6:nth-child(2) {
+    /* Text column */
+    margin-top: 40px; /* Adjust vertical spacing as needed */
+  }
+}
+
+/* Desktop (side-by-side columns): Add horizontal space to the LEFT of the text column */
+@media (min-width: 992px) {
+  #about .row > .col-lg-6:nth-child(2) {
+    /* Text column */
+    /* Increase left padding to push text away from the image column */
+    /* Bootstrap default padding is calc(var(--bs-gutter-x) * .5), usually 0.75rem */
+    /* We override it with a larger value */
+    padding-left: 3rem; /* Adjust horizontal spacing (e.g., 2.5rem, 40px) as needed */
   }
 }
