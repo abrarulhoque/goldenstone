@@ -18,6 +18,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
+  // Handle hero form submission
+  const applyForm = document.getElementById('applyForm')
+  if (applyForm) {
+    applyForm.addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      // Simple validation
+      let valid = true
+      this.querySelectorAll('input, select').forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('is-invalid')
+          valid = false
+        } else {
+          input.classList.remove('is-invalid')
+        }
+      })
+
+      if (valid) {
+        // Get form elements
+        const submitBtn = this.querySelector('button[type="submit"]')
+        const formSuccess = document.getElementById('formSuccess')
+
+        // Disable button and show loading state
+        submitBtn.disabled = true
+        submitBtn.innerHTML =
+          '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Processing...'
+
+        // Simulate API call (2 second delay)
+        setTimeout(() => {
+          // Hide form inputs
+          this.querySelectorAll('.mb-3').forEach(el => {
+            el.style.display = 'none'
+          })
+          submitBtn.style.display = 'none'
+
+          // Show success message
+          formSuccess.classList.remove('d-none')
+        }, 2000)
+      }
+    })
+  }
+
   // Number counter animation
   const countElements = document.querySelectorAll('[data-counter]')
 
@@ -101,63 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'
     })
   })
-
-  // Form validation
-  const qualifyForm = document.querySelector('.qualify-form-card form')
-  if (qualifyForm) {
-    qualifyForm.addEventListener('submit', function (e) {
-      e.preventDefault()
-
-      // Simple validation
-      let valid = true
-      this.querySelectorAll('input, select').forEach(input => {
-        if (!input.value.trim()) {
-          input.classList.add('is-invalid')
-          valid = false
-        } else {
-          input.classList.remove('is-invalid')
-        }
-      })
-
-      if (valid) {
-        // Submit form or show success message
-        const submitBtn = this.querySelector('button[type="submit"]')
-        const originalText = submitBtn.innerText
-
-        submitBtn.disabled = true
-        submitBtn.innerHTML =
-          '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Processing...'
-
-        // Simulate API call
-        setTimeout(() => {
-          submitBtn.innerHTML = 'Success!'
-          submitBtn.classList.remove('btn-primary')
-          submitBtn.classList.add('btn-success')
-
-          // Reset form after successful submission
-          setTimeout(() => {
-            this.reset()
-            submitBtn.disabled = false
-            submitBtn.innerText = originalText
-            submitBtn.classList.add('btn-primary')
-            submitBtn.classList.remove('btn-success')
-
-            // Show success message
-            const formSuccess = document.createElement('div')
-            formSuccess.className = 'alert alert-success mt-3'
-            formSuccess.innerText =
-              'Your application has been submitted successfully! Our team will contact you shortly.'
-            this.appendChild(formSuccess)
-
-            // Remove message after 5 seconds
-            setTimeout(() => {
-              formSuccess.remove()
-            }, 5000)
-          }, 1500)
-        }, 2000)
-      }
-    })
-  }
 
   // Add floating animation
   const addFloatingAnimation = (selector, duration = 4, distance = 10) => {
