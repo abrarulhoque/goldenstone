@@ -787,3 +787,110 @@ h6 {
     justify-content: center;
   }
 }
+
+/* Services Detailed Section */
+.services-detailed-section {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.service-detail-image {
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.service-detail-image:hover img {
+  transform: scale(1.05);
+}
+
+.service-detail-image img {
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.service-detail-content {
+  padding: 20px;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.service-features li i {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+/* Application Section */
+.application-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-section:before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(26, 35, 126, 0.05);
+  right: -100px;
+  top: -100px;
+}
+
+.application-form-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.application-benefits {
+  margin-top: 30px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 213, 79, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.benefit-icon i {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.benefit-content h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.benefit-content p {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 14px;
+}
