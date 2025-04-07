@@ -1098,3 +1098,46 @@ h6 {
     font-size: 48px;
   }
 }
+
+/* Terms & Privacy Styles */
+.content-wrapper {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.terms-section h3,
+.privacy-section h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.terms-section p,
+.privacy-section p {
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.terms-section ul,
+.privacy-section ul {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.terms-section li,
+.privacy-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 1.5rem !important;
+  }
+
+  .terms-section h3,
+  .privacy-section h3 {
+    font-size: 1.3rem;
+  }
+}
