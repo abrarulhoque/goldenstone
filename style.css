@@ -164,12 +164,14 @@ h6 {
   border-radius: 50px;
   padding: 8px 20px !important;
   margin-left: 15px;
+  transition: var(--transition);
 }
 
 .btn-qualify:hover {
   background-color: var(--secondary-light);
   transform: translateY(-3px);
   box-shadow: var(--shadow);
+  color: var(--primary-dark) !important;
 }
 
 /* Hero Section */
@@ -234,9 +236,8 @@ h6 {
 }
 
 .hero-form-card .form-title {
-  color: var(--text-light);
-  text-align: center;
-  font-size: 1.5rem;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .hero-form-card .form-control,
